@@ -33,7 +33,7 @@ graph["kim"] = []
 graph["liam"] = []
 graph["noah"] = []
 graph["oliver"] = []
-# I have 3 friends, and each of them have more 3, so I will search the book on 12 people
+# I have 3 friends, and each of them have more 3, so I'll search for the book seller between 12 people
 
 book_seller = input("Choose some of them to be the book seller: ")
 
