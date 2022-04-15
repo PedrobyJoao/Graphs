@@ -6,9 +6,9 @@ Right now, I'm into GRAPHS. So this repository is for study purposes only.<br><h
 are structure models to study the relation between objects. The objects are represented by vertices (nodes) and each of them are connected by an edge. Graphs can be ordered/unordered and weighted/unweighted.
 <hr>
 
-## graph.py (Finder algorithm)
+## graph.py (Breadth-first search (BFS))
 <br>
-This first study is the most basic graph algorithm.<Br><Br>
+This first study is the most basic graph search algorithm, the Breadth-first search (BFS) looks for an specific object in an undirected graph.<Br><Br>
 
 Problem: I want to find a book seller<Br>
 Solution: Ask to my friends if they sell books, if not -> then ask to the friends of my friends and so on. <br>
