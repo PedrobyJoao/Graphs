@@ -11,7 +11,7 @@ are structure models to study the relation between objects. The objects are repr
 This first study is the most basic graph algorithm.<Br><Br>
 
 Problem: I want to find a book seller<Br>
-Solution: Ask to my friends if they sell it, if not -> then ask to the friends of my friends and so on. <br>
+Solution: Ask to my friends if they sell books, if not -> then ask to the friends of my friends and so on. <br>
 
 Each friend will be a node, and two nodes connected by an edge means that they are friends
 
