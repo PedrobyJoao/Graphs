@@ -1,7 +1,7 @@
 # Graph Algorithms
 
 I'm currently studying some algorithms with the book "Grokking Algorithms".<br>
-Right now, I'm into GRAPHS. So this repository is for study purposes only.<br>
+Right now, I'm into GRAPHS. So this repository is for study purposes only.<br><hr>
 ### Graphs
 are structure models to study the relation between objects. The objects are represented by vertices (nodes) and each of them are connected by an edge. Graphs can be ordered/unordered and weighted/unweighted.
 <hr>
