@@ -15,22 +15,22 @@ Example: You want to go from A to B in your city. You can follow two paths:<br>
 1- Pass through four streets<br>
 2- Pass through eight streets<Br>
 Can you answer what is the best option? No because we don't know how long are each street, even if option 1 has less streets to pass by, this doesn't mean too much if they are too long when comparing to the streets of the option 2. The answer of this question would be solved calculating the SUM of distance/time of each street per option.<Br>
-<figure align="center">
+<p align="center">
   <img 
     width="400"
     height="300"
     src="https://media.geeksforgeeks.org/wp-content/uploads/minmEdges-1.png"
   >
-  <figcaption>Graph, nodes and edges - Undirected & Unweighted</figcaption>
-</figure><br>
-<figure align="center">
+  <figcaption align="center">Graph, nodes and edges - Undirected & Unweighted</figcaption><br>
+</p>
+<p align="center">
   <img 
     width="400"
     height="400"
     src="https://www.techiedelight.com/wp-content/uploads/weighted-edges.png"
   >
-  <figcaption>Graph - WEIGHETED and DIRECTED</figcaption>
-</figure>
+  <figcaption align="center">Graph - WEIGHETED and DIRECTED</figcaption>
+</p>
 
 <hr>
 
@@ -40,14 +40,14 @@ This first study is the most basic graph search algorithm, the Breadth-first sea
 
 Problem: I want to find a book seller<Br>
 Solution: Ask to my friends if they sell books, if not -> then ask to the friends of my friends and so on. <br>
-<figure align="center">
+<p align="center">
   <img 
     width="500"
     height="350"
     src="https://drek4537l1klr.cloudfront.net/bhargava/Figures/101fig02.jpg"
   >
-  <figcaption>One of these nodes is the book seller</figcaption>
-</figure>
+  <figcaption align="center">One of these nodes is the book seller</figcaption>
+</p>
 Each friend will be a node, and two nodes connected by an edge means that they are friends
 
 Abstraction: MyFriends = [Bob, Carl, John], John_Friends = [Linda, Carol]... each of my friends have more friends, and each of their friend's friends 
