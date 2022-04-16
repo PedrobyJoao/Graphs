@@ -3,7 +3,7 @@
 I'm currently studying some algorithms with the book "Grokking Algorithms".<br>
 Right now, I'm into GRAPHS. So this repository is for study purposes only.<br><hr>
 # Graphs
-are structure models to study the relation between objects. The objects are represented by vertices (nodes) and each of them are connected by an edge. Graphs can be undirected/directed (ordered/unordered) and weighted/unweighted, which means:
+Graphs are structure models to study the relation between objects. The objects are represented by vertices (nodes) and each of them are connected by an edge. Graphs can be undirected/directed (ordered/unordered) and weighted/unweighted, which means:
 - Direction: The graph is directed when its relationship between objects has order.<Br>
 A---->B is directed because A points to B but B doesn't point to A.<Br>A-----B (or A<---->B) is undirected which means that the relation between those are bidirectional<br>
 Fictional exemple: Nodes: People | Edges: Love<br>
@@ -14,7 +14,24 @@ However, if the system is weighted and the edges has values (i.e.: km or minutes
 Example: You want to go from A to B in your city. You can follow two paths:<br>
 1- Pass through four streets<br>
 2- Pass through eight streets<Br>
-Can you answer what is the best option? No because we don't know how long are each street, even if option 1 has less streets to pass by, this doesn't mean too much if they are too long when comparing to the streets of the option 2. The answer of this question would be solved calculating the SUM of distance/time of each street per option.
+Can you answer what is the best option? No because we don't know how long are each street, even if option 1 has less streets to pass by, this doesn't mean too much if they are too long when comparing to the streets of the option 2. The answer of this question would be solved calculating the SUM of distance/time of each street per option.<Br>
+<figure align="center">
+  <img 
+    width="400"
+    height="300"
+    src="https://media.geeksforgeeks.org/wp-content/uploads/minmEdges-1.png"
+  >
+  <figcaption>Graph, nodes and edges - Undirected & Unweighted</figcaption>
+</figure><br>
+<figure align="center">
+  <img 
+    width="400"
+    height="400"
+    src="https://www.techiedelight.com/wp-content/uploads/weighted-edges.png"
+  >
+  <figcaption>Graph - WEIGHETED and DIRECTED</figcaption>
+</figure>
+
 <hr>
 
 ## graph.py (Breadth-first search (BFS))
@@ -23,7 +40,14 @@ This first study is the most basic graph search algorithm, the Breadth-first sea
 
 Problem: I want to find a book seller<Br>
 Solution: Ask to my friends if they sell books, if not -> then ask to the friends of my friends and so on. <br>
-
+<figure align="center">
+  <img 
+    width="500"
+    height="350"
+    src="https://drek4537l1klr.cloudfront.net/bhargava/Figures/101fig02.jpg"
+  >
+  <figcaption>One of these nodes is the book seller</figcaption>
+</figure>
 Each friend will be a node, and two nodes connected by an edge means that they are friends
 
 Abstraction: MyFriends = [Bob, Carl, John], John_Friends = [Linda, Carol]... each of my friends have more friends, and each of their friend's friends 
