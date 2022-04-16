@@ -3,12 +3,23 @@
 I'm currently studying some algorithms with the book "Grokking Algorithms".<br>
 Right now, I'm into GRAPHS. So this repository is for study purposes only.<br><hr>
 ### Graphs
-are structure models to study the relation between objects. The objects are represented by vertices (nodes) and each of them are connected by an edge. Graphs can be ordered/unordered and weighted/unweighted.
+are structure models to study the relation between objects. The objects are represented by vertices (nodes) and each of them are connected by an edge. Graphs can be undirected/directed (ordered/unordered) and weighted/unweighted, which means:
+- Direction: The graph is directed when its relationship between objects has order.<Br>
+A---->B is directed because A points to B but B doesn't point to A.<Br>A-----B (or A<---->B) is undirected which means that the relation between those are bidirectional<br>
+Fictional exemple: Nodes: People | Edges: Love<br>
+Bob---->Ane means that Bob loves Ane but Ane does not love Bob<br>
+Bob----Ane here both love each other
+- Weight: Edges can have weight to represent one more "variable" in the system. One general use for graphs is to calculate the distance between two nodes, if the edges are unweighted so the shortest path will be the one with less edges to pass by.<Br>
+However, if the system is weighted and the edges has values (i.e.: km or minutes), then the shortest path is the one with the lowest value of the SUM of weights.<br>
+Example: You want to go from A to B in your city. You can follow two paths:<br>
+1- Pass through four streets<br>
+2- Pass through eight streets<Br>
+Can you answer what is the best option? No because we don't know how long are each street, even if option 1 has less streets to pass by, this doesn't mean too much if they are too long when comparing to the streets of the option 2. The answer of this question would be solved calculating the SUM of distance/time of each street per option.
 <hr>
 
 ## graph.py (Breadth-first search (BFS))
 <br>
-This first study is the most basic graph search algorithm, the Breadth-first search (BFS) looks for an specific object in an undirected graph.<Br><Br>
+This first study is the most basic graph search algorithm, the Breadth-first search (BFS) looks for an specific object in an UNDIRECTED (unordered) and UNWEIGHTED GRAPH.<Br><Br>
 
 Problem: I want to find a book seller<Br>
 Solution: Ask to my friends if they sell books, if not -> then ask to the friends of my friends and so on. <br>
