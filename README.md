@@ -21,7 +21,7 @@ Can you answer what is the best option? No because we don't know how long are ea
     height="300"
     src="https://media.geeksforgeeks.org/wp-content/uploads/minmEdges-1.png"
   >
-  <figcaption align="center">Graph, nodes and edges - Undirected & Unweighted</figcaption><br>
+  <p align="center">Graph, nodes and edges - Undirected & Unweighted</p><br>
 </p>
 <p align="center">
   <img 
@@ -29,7 +29,7 @@ Can you answer what is the best option? No because we don't know how long are ea
     height="400"
     src="https://www.techiedelight.com/wp-content/uploads/weighted-edges.png"
   >
-  <figcaption align="center">Graph - WEIGHETED and DIRECTED</figcaption>
+  <p align="center">Graph - WEIGHETED and DIRECTED</p>
 </p>
 
 <hr>
@@ -46,7 +46,7 @@ Solution: Ask to my friends if they sell books, if not -> then ask to the friend
     height="350"
     src="https://drek4537l1klr.cloudfront.net/bhargava/Figures/101fig02.jpg"
   >
-  <figcaption align="center">One of these nodes is the book seller</figcaption>
+  <p align="center">One of these nodes is the book seller</p>
 </p>
 Each friend will be a node, and two nodes connected by an edge means that they are friends
 
