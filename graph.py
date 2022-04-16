@@ -1,6 +1,6 @@
 '''
 Problem: I want to find a book seller
-Solution: Ask to my friends if they sell it, if not -> then ask to the friends of my friends and so on
+Solution: Ask to my friends if they sell books, if not -> then ask to the friends of my friends and so on
 
 Abstraction: MyFriends = [Bob, Carl, John], John_Friends = [Linda, Carol]... each of my friends have more friends, and each of their friend's friends 
 have even more friends.
@@ -19,10 +19,10 @@ from collections import deque
 
 # Creating the graphs itself with fictional data, each vertice is a person who can be a book seller
 graph = {}
-graph["me"] = ["linda", "john", "paul"]
-graph["linda"] = ["jenny", "mikasa", "eren"]
-graph["john"] = ["bob", "lee", "kim"]
-graph["paul"] = ["liam", "noah", "oliver"]
+graph["me"] = ["linda", "john", "paul"] # My friends
+graph["linda"] = ["jenny", "mikasa", "eren"] # linda's friends
+graph["john"] = ["bob", "lee", "kim"] # john's friends
+graph["paul"] = ["liam", "noah", "oliver"] # paul's friends
 # All bellow do not have friends =/
 graph["jenny"] = []
 graph["mikasa"] = []
