@@ -2,7 +2,7 @@
 
 I'm currently studying some algorithms with the book "Grokking Algorithms".<br>
 Right now, I'm into GRAPHS. So this repository is for study purposes only.<br><hr>
-### Graphs
+# Graphs
 are structure models to study the relation between objects. The objects are represented by vertices (nodes) and each of them are connected by an edge. Graphs can be undirected/directed (ordered/unordered) and weighted/unweighted, which means:
 - Direction: The graph is directed when its relationship between objects has order.<Br>
 A---->B is directed because A points to B but B doesn't point to A.<Br>A-----B (or A<---->B) is undirected which means that the relation between those are bidirectional<br>
