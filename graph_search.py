@@ -18,6 +18,7 @@ Besides finding a seller, I want to find the closest one. So buying from my frie
 from collections import deque
 
 # Creating the graphs itself with fictional data, each vertice is a person who can be a book seller
+# I have 3 friends, and each of them have more 3, so I'll search for the book seller between 12 people
 graph = {}
 graph["me"] = ["linda", "john", "paul"] # My friends
 graph["linda"] = ["jenny", "mikasa", "eren"] # linda's friends
@@ -33,8 +34,9 @@ graph["kim"] = []
 graph["liam"] = []
 graph["noah"] = []
 graph["oliver"] = []
-# I have 3 friends, and each of them have more 3, so I'll search for the book seller between 12 people
 
+
+# Asking user's input
 book_seller = input("Choose some of them to be the book seller: ")
 
 # Function to verify if the person is the book seller
@@ -43,8 +45,9 @@ def verify(person):
         return True
     return False
 
+# Breadth-first search
 def find_seller(me):
-    tobe_verified = deque()
+    tobe_verified = deque() # a queue is necessary to control the order of people to be verified, rembember that we want the closest seller
     tobe_verified += graph[me]
     while tobe_verified:
         person = tobe_verified[0]
