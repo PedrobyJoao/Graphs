@@ -46,10 +46,16 @@ parents = {}
 updated_nodes = []
 
 # Function to compare the weights between two paths and return the cheapest one
-def lowest_weight():
-    print("")
+def lowest_weight(node):
+    lowest_weight = float ("inf")
+    lowest_node = None
+    for key in graph[node]:
+        if graph[node][key] < lowest_weight:
+            lowest_weight = graph[node][key]
+            lowest_node = key
+    return lowest_node
 
 # Dijkstra algorithm to find the shortest path
 
-
-print(graph[0])
+lowest_weight('start')
+#print(graph[0])
