@@ -15,6 +15,7 @@ Example: You want to go from A to B in your city. You can follow two paths:<br>
 1- Pass through four streets<br>
 2- Pass through eight streets<Br>
 Can you answer what is the best option? No because we don't know how long are each street, even if option 1 has less streets to pass by, this doesn't mean too much if they are too long when comparing to the streets of the option 2. The answer of this question would be solved calculating the SUM of distance/time of each street per option.<Br>
+(**IMPORTANT: I don't know if it is the best way but in both exercises I'm using dictionaries (hash tables) to build the graphs, where each node is a key to values, values which are the vertices connected to the key node. Those values connected to the key node can be a key on their own too and have their own values)
 <p align="center">
   <img 
     width="400"
