@@ -35,7 +35,6 @@ graph["liam"] = []
 graph["noah"] = []
 graph["oliver"] = []
 
-
 # Asking user's input
 book_seller = input("Choose some of them to be the book seller: ")
 
