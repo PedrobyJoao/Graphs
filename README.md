@@ -1,7 +1,9 @@
 # Graph Algorithms
 
 I'm currently studying some algorithms with the book "Grokking Algorithms".<br>
-Right now, I'm into GRAPHS. So this repository is for study purposes only.<br><hr>
+Right now, I'm into GRAPHS. So this repository is for study purposes only.
+
+(Although I would prefer C-language, I'm using Python because I want to focus on the algorithm itself and not to worry about memory management)<br>
 # Graphs
 Graphs are structure models to study the relation between objects. The objects are represented by vertices (nodes) and each of them are connected by an edge. Graphs can be undirected/directed (ordered/unordered) and weighted/unweighted, which means:
 - Direction: The graph is directed when its relationship between objects has order.<Br>
@@ -60,5 +62,3 @@ Example: John----Linda. John and Linda are vertices connected by an edge, which 
 Besides finding a seller, I want to find the closest one. So buying from my friend is better than buying from my friend's friend
 
 (I highly recommend you to look for graph images in order to better understand)<br>
-<hr><br>
-(Although I'd prefer C-language, I'm using Python because I want to focus on the algorithm itself and not to worry about memory management with 'malloc' and 'free')
