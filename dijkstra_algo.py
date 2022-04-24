@@ -48,7 +48,7 @@ cost["end"] = float ("inf")
 cost['a'] = float ("inf")
 cost['b'] = float ("inf")
 
-# dict of to be updated nodes
+# copy of cost hash table. But this one will have nodes deleted
 tobeupdated_nodes = dict(cost)
 
 # Function to return the lowest weight node from the COST hash table
