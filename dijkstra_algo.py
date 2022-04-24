@@ -43,26 +43,48 @@ parents = {}
 
 # Cost hash table (Key == node, Value == cost)
 cost = {}
+cost['start'] = 0
+cost["end"] = float ("inf")
+cost['a'] = float ("inf")
+cost['b'] = float ("inf")
 
-# array of updated nodes
-updated_nodes = []
+# dict of to be updated nodes
+tobeupdated_nodes = dict(cost)
 
-# Function to compare the weights between two paths and return the cheapest one
-def lowest_weight(node):
-    lowest_weight = float ("inf")
-    lowest_node = None
-    for key in graph[node]:
-        if graph[node][key] < lowest_weight:
-            lowest_weight = graph[node][key]
-            lowest_node = key
-    return lowest_node, lowest_weight
+# Function to return the lowest weight node from the COST hash table
+def lowest_weight():
+    key = None
+    return min(tobeupdated_nodes, key = tobeupdated_nodes.get)
 
 # Dijkstra algorithm to find the shortest path
-def dijkstra():
-    next_node = lowest_weight("start")[0]
-    for path in graph[next_node]:
-        graph[next_node][path] = 
-    print("Teste")
+def dijkstra(start):
 
-for i in graph['b']:
-    print(i)
+    # Next node (the lowest weight)
+    next_node = start
+    path_cost = 0
+
+    # Updating costs and parents for each node
+    while next_node != "end":
+        if next_node in tobeupdated_nodes.keys():
+            for neighbor in graph[next_node]:
+                if cost[neighbor] > path_cost + graph[next_node][neighbor]:
+                    cost[neighbor] = graph[next_node][neighbor] + path_cost
+                    tobeupdated_nodes[neighbor] = graph[next_node][neighbor]
+                    parents[neighbor] = next_node
+            tobeupdated_nodes.pop(next_node, None)
+            next_node = lowest_weight()
+            path_cost += cost[next_node]
+
+    # Printing result
+    print(parents)
+    print("The best path is: ", end='')
+    parent = 'end'
+    while parent != 'start':
+        print(parent + " " + "<--" + " ", end='')
+        parent = parents[parent]
+    print(start)
+    print("The total cost is: " + str(cost['end']))
+
+
+dijkstra("start")
+
