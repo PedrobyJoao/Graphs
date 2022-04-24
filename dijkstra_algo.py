@@ -76,7 +76,6 @@ def dijkstra(start):
             path_cost += cost[next_node]
 
     # Printing result
-    print(parents)
     print("The best path is: ", end='')
     parent = 'end'
     while parent != 'start':
