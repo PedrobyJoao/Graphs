@@ -16,7 +16,7 @@ graph = {} # main hash table
 # hash table for the START node where it will be stored weight values of edges
 graph['start'] = {} 
 graph['start']['a'] = 6
-graph['start']['b'] = 0
+graph['start']['b'] = 2
 
 # hash table for the B node
 graph['b'] = {}
@@ -69,11 +69,15 @@ def dijkstra(start):
             for neighbor in graph[next_node]:
                 if cost[neighbor] > path_cost + graph[next_node][neighbor]:
                     cost[neighbor] = graph[next_node][neighbor] + path_cost
-                    tobeupdated_nodes[neighbor] = graph[next_node][neighbor]
+                    tobeupdated_nodes[neighbor] = graph[next_node][neighbor] + path_cost
                     parents[neighbor] = next_node
             tobeupdated_nodes.pop(next_node, None)
+            previous_node = next_node
             next_node = lowest_weight()
-            path_cost += cost[next_node]
+            if next_node in graph[previous_node]:
+              path_cost += graph[previous_node][next_node]
+            else:
+              path_cost = cost[next_node]
 
     # Printing result
     print("The best path is: ", end='')
