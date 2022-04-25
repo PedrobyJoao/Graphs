@@ -69,7 +69,7 @@ How does it work?<Br><Br>
 1- From the start chosen point, go to the cheapest neighbor (which the start point is directing). Let's say that you went from "Start" to "B", which is the cheapest path, but there was the node "A" as an option too.<br>
 2- Now, you will do the same thing for B, go to the next cheapest neighbor. However, you'll also update the cost values of each node. Let's say that from B you can go to A, if the path Start-->B-->A is cheaper than Start-->A, the algorithm must update the cost of A.<Br><br>
 This was a real basic explanation but let me enter in code details:<Br>
-The program needs a hash table for the graph itself, and inside this hash table there will be other hash tables for each node, being the key a node-parents and the value the nodes that are being directed by the node-parent, which is basically the paths the you can go from the specific node.<br>
+The program needs a hash table for the graph itself, and inside this hash table there will be other hash tables for each node, being the key a node-parents and the value is the weight, i.e.: graph["start"]["b"] = 6 means that from START node to B node, there is a edge with weight 6.<br>
 Also, it is needed a hash table for COSTS to mantain the total cost to go to a certain node updated.<br>
 And a PARENTS hash table, this is what will give us the final path, the parent-node must be always the cheapest one.<br><br>
 Now, let's go to the exercise itself, the dijkstra_algorithm.py:<br><Br>
