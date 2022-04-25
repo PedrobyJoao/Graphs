@@ -33,9 +33,9 @@ Can you answer what is the best option? No because we don't know how long are ea
     src="https://www.techiedelight.com/wp-content/uploads/weighted-edges.png"
   >
   <p align="center">Graph - WEIGHETED and DIRECTED</p>
-</p>
+</p><br>
 
-<hr>
+<hr><br>
 
 ## graph.py (Breadth-first search (BFS))
 <br>
@@ -61,4 +61,46 @@ Example: John----Linda. John and Linda are vertices connected by an edge, which 
 
 Besides finding a seller, I want to find the closest one. So buying from my friend is better than buying from my friend's friend
 
-(I highly recommend you to look for graph images in order to better understand)<br>
+(I highly recommend you to look for graph images in order to better understand)<br><br><hr><br>
+## dijkstra_algorithm.py (Dijkstra Algorithm)
+<br>
+The Dijkstra Algorithm is used to find the shortest path between two nodes in an WEIGHTED (only positive values) and DIRECTED graph.<br><br>
+How does it work?<Br><Br>
+1- From the start chosen point, go to the cheapest neighbor (which the start point is directing). Let's say that you went from "Start" to "B", which is the cheapest path, but there was the node "A" as an option too.<br>
+2- Now, you will do the same thing for B, go to the next cheapest neighbor. However, you'll also update the cost values of each node. Let's say that from B you can go to A, if the path Start-->B-->A is cheaper than Start-->A, the algorithm must update the cost of A.<Br><br>
+This was a real basic explanation but let me enter in code details:<Br>
+The program needs a hash table for the graph itself, and inside this hash table there will be other hash tables for each node, being the key a node-parents and the value the nodes that are being directed by the node-parent, which is basically the paths the you can go from the specific node.<br>
+Also, it is needed a hash table for COSTS to mantain the total cost to go to a certain node updated.<br>
+And a PARENTS hash table, this is what will give us the final path, the parent-node must be always the cheapest one.<br><br>
+Now, let's go to the exercise itself, the dijkstra_algorithm.py:<br><Br>
+Bob is in a thrift store where people can exchange items betweem themselves. Bob has a book and wants to buy a Piano. To get the piano Bob has to have or a Bass-Guitar or a Drum-Set, and to have those things Bob has first to have a Rare-LP or a Poster.<br>
+So Bob will have to make some trades. As you can see in the image, besides the item itself, Bob will have to pay something more to exchange items. Example, if Bob trade his Book for the Rare-LP, he'll also have to give $5 more for it.<br>
+<br>
+So the question is: which path is the cheapest? Which one Bob will spend less money?<br><Br>
+The answer is: Book --> LP --> Drum --> Piano<br> This is the cheapest path which he'll spend $35 to get the piano.<Br><br>
+<p align="center">
+  <img 
+    width="500"
+    height="350"
+    src="https://drek4537l1klr.cloudfront.net/bhargava/Figures/123fig02.jpg"
+  >
+  <p align="center">Start point: Book || End Point: Piano</p>
+</p>
+<Br><br>
+
+## dijkstra_simple.py (Dijkstra Algorithm)
+<br>
+In this exercise, a simpler graph was used as you can see in the image.<br><br>
+<p align="center">
+  <img 
+    width="400"
+    height="300"
+    src="https://drek4537l1klr.cloudfront.net/bhargava/Figures/116fig03.jpg"
+  >
+  <p align="center">Shortest path from Start to End?</p>
+</p>
+Here is easier to know the shortest path. The answer is:<br>
+Start --> B --> A --> End || Total cost for this path: 6<br><Br>
+If you choose other paths:<br>
+Start --> A --> End || Total cost: 7<Br>
+Start --> B --> End || Total cost: 7
