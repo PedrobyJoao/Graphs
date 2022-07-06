@@ -1,7 +1,7 @@
-# Graph Algorithms
+# Search Algorithms for Graphs
 
 I'm currently studying some algorithms with the book "Grokking Algorithms".<br>
-Right now, I'm into GRAPHS. So this repository is for study purposes only.
+Right now, I'm into GRAPHS, specifically SEARCH ALGORITHMS for Graphs. So this repository is for study purposes only.
 
 (Although I would prefer C-language, I'm using Python because I want to focus on the algorithm itself and not to worry about memory management)<br>
 # Graphs
